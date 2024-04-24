@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FinanceiroActivity">
+
+    <TextView
+        android:id="@+id/titulo_financeiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviço Financeiro"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/salario_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o salário (R$)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/titulo_financeiro"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/calcula_descontos_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Descontos"
+        android:layout_below="@id/salario_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/salario_bruto_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salário Bruto:"
+        android:textSize="18sp"
+        android:layout_below="@id/calcula_descontos_button"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/desconto_inss_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desconto INSS:"
+        android:textSize="18sp"
+        android:layout_below="@id/salario_bruto_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/desconto_fgts_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desconto FGTS:"
+        android:textSize="18sp"
+        android:layout_below="@id/desconto_inss_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/salario_liquido_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salário Líquido:"
+        android:textSize="18sp"
+        android:layout_below="@id/desconto_fgts_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botão "Encerrar" -->
+    <Button
+        android:id="@+id/encerrar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encerrar"
+        android:layout_below="@id/salario_liquido_text_view"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Botão "Limpar" -->
+    <Button
+        android:id="@+id/limpar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_below="@id/salario_liquido_text_view"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SaudeActivity">
+
+    <TextView
+        android:id="@+id/titulo_saude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviço de Saúde"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/peso_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu peso (kg)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/titulo_saude"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/altura_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua altura (m)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/peso_edit_text"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/calcula_imc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:layout_below="@id/altura_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/peso_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso:"
+        android:textSize="18sp"
+        android:layout_below="@id/calcula_imc_button"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/altura_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura:"
+        android:textSize="18sp"
+        android:layout_below="@id/peso_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/imc_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMC:"
+        android:textSize="18sp"
+        android:layout_below="@id/altura_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/classificacao_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Classificação:"
+        android:textSize="18sp"
+        android:layout_below="@id/imc_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botão "Encerrar" -->
+    <Button
+        android:id="@+id/encerrar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encerrar"
+        android:layout_below="@id/classificacao_text_view"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Botão "Limpar" -->
+    <Button
+        android:id="@+id/limpar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_below="@id/classificacao_text_view"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
+

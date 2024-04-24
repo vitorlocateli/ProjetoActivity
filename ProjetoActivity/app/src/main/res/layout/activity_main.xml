@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_info_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo ao App"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/financeiro_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviço Financeiro"
+        android:layout_below="@id/app_info_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/educacao_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviço de Educação"
+        android:layout_below="@id/financeiro_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/saude_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviço de Saúde"
+        android:layout_below="@id/educacao_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/informacoes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informações do Aluno"
+        android:layout_below="@id/saude_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
