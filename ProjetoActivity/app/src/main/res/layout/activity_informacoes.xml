@@ -51,7 +51,6 @@
         android:layout_below="@id/curso_text_view"
         android:layout_marginTop="16dp"/>
 
-    <!-- Botão "Limpar" -->
     <Button
         android:id="@+id/limpar_button"
         android:layout_width="wrap_content"
@@ -61,7 +60,6 @@
         android:layout_marginTop="24dp"
         android:layout_alignParentStart="true"/>
 
-    <!-- Botão "Encerrar" -->
     <Button
         android:id="@+id/encerrar_button"
         android:layout_width="wrap_content"

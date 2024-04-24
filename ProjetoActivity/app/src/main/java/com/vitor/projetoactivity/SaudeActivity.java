@@ -24,7 +24,6 @@ public class SaudeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saude);
 
-        // Inicializando as Views
         pesoEditText = findViewById(R.id.peso_edit_text);
         alturaEditText = findViewById(R.id.altura_edit_text);
         pesoTextView = findViewById(R.id.peso_text_view);
@@ -34,7 +33,6 @@ public class SaudeActivity extends AppCompatActivity {
         encerrarButton = findViewById(R.id.encerrar_button);
         limparButton = findViewById(R.id.limpar_button);
 
-        // Configurando o botão de calcular
         Button calcularButton = findViewById(R.id.calcula_imc_button);
         calcularButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +41,6 @@ public class SaudeActivity extends AppCompatActivity {
             }
         });
 
-        // Configurando o botão "Encerrar"
         encerrarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +49,6 @@ public class SaudeActivity extends AppCompatActivity {
             }
         });
 
-        // Configurando o botão "Limpar"
         limparButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,19 +64,15 @@ public class SaudeActivity extends AppCompatActivity {
     }
 
     private void calcularIMC() {
-        // Obtendo o peso e a altura inseridos pelo usuário
         double peso = Double.parseDouble(pesoEditText.getText().toString());
         double altura = Double.parseDouble(alturaEditText.getText().toString());
 
-        // Calculando o IMC
         double imc = peso / (altura * altura);
 
-        // Exibindo o peso, altura e IMC nos TextViews correspondentes
         pesoTextView.setText("Peso: " + peso + " kg");
         alturaTextView.setText("Altura: " + altura + " m");
         imcTextView.setText("IMC: " + String.format("%.2f", imc));
 
-        // Determinando a classificação do IMC e exibindo-a
         String classificacao;
         if (imc < 18.5) {
             classificacao = "Magreza";

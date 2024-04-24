@@ -26,7 +26,6 @@ public class EducacaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_educacao);
 
-        // Inicializando as Views
         ni1EditText = findViewById(R.id.ni1_edit_text);
         ni2EditText = findViewById(R.id.ni2_edit_text);
         poEditText = findViewById(R.id.po_edit_text);
@@ -38,7 +37,6 @@ public class EducacaoActivity extends AppCompatActivity {
         encerrarButton = findViewById(R.id.encerrar_button);
         limparButton = findViewById(R.id.limpar_button);
 
-        // Configurando o botão de calcular aprovação
         Button calcularAprovacaoButton = findViewById(R.id.calcula_aprovacao_button);
         calcularAprovacaoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,16 +45,13 @@ public class EducacaoActivity extends AppCompatActivity {
             }
         });
 
-        // Configurando o botão "Encerrar"
         encerrarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Adicione aqui o código para encerrar a atividade
                 finish();
             }
         });
 
-        // Configurando o botão "Limpar"
         limparButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,18 +69,14 @@ public class EducacaoActivity extends AppCompatActivity {
     }
 
     private void calcularAprovacao() {
-        // Obtendo as notas inseridas pelo usuário
         double ni1 = Double.parseDouble(ni1EditText.getText().toString());
         double ni2 = Double.parseDouble(ni2EditText.getText().toString());
         double po = Double.parseDouble(poEditText.getText().toString());
 
-        // Calculando a média das notas
         double media = (ni1 * 0.2) + (ni2 * 0.3) + (po * 0.5);
 
-        // Exibindo a média
         mediaTextView.setText("Média: " + media);
 
-        // Determinando o status de aprovação
         String statusAprovacao;
         if (media >= 6.0) {
             statusAprovacao = "Aprovado";
@@ -93,7 +84,6 @@ public class EducacaoActivity extends AppCompatActivity {
             statusAprovacao = "Reprovado";
         }
 
-        // Exibindo o status de aprovação
         statusAprovacaoTextView.setText("Status de Aprovação: " + statusAprovacao);
     }
 }
