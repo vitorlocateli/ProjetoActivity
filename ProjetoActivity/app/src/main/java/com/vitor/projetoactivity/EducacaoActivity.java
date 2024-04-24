@@ -55,7 +55,6 @@ public class EducacaoActivity extends AppCompatActivity {
         limparButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Adicione aqui o código para limpar os EditTexts e os TextViews
                 ni1EditText.setText("");
                 ni2EditText.setText("");
                 poEditText.setText("");
